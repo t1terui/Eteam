@@ -1,17 +1,10 @@
-@ -0,0 +1,16 @@
+
 html{
     font-size: 100%;
 }
 
-
-.title{
-    font-size: 200px;
+.p-quiz-ttl{
+    font-size: 100px;
+    color: #fff;
     text-align: center;
-}
-
-
-.quiz span{
-    font-size: 200px;
-    text-align: center;
-    margin: 10 20 30 40;
 }
