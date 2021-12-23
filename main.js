@@ -61,5 +61,7 @@ function print_quiz(){
     currentquizNo = experiencequiz[excount];
     excount++;
 
-
+    var question = '<p >' + quizdata[0][currentquizNo][0] + '</p>';
+    var box = document.getElementsByClassName('box');
+    bo
 }
