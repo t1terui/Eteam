@@ -18,22 +18,22 @@ let quizdata = [
         ['電話をかける時に非通知にするための番号は？', ['A.111','B.184','C.186','D.232'], 2, '相手先の電話番号の前に「184」をつけることで電話番号を通知せずに発信することができます。184「いやよ」という語呂合わせで覚えるとよい。'],
     ],
     [
-        [0, 'result00.html'],
-        [1, 'result01.html'],
-        [2, 'result02.html'],
-        [3, 'result03.html'],
-        [4, 'result04.html'],
-        [5, 'result05.html'],
-        [6, 'result06.html'],
-        [7, 'result07.html'],
-        [8, 'result08.html'],
-        [9, 'result09.html'],
-        [10, 'result10.html'],
-        [11, 'result11.html'],
-        [12, 'result12.html'],
-        [13, 'result13.html'],
-        [14, 'result14.html'],
-        [15, 'result15.html']
+        [0, 'result.html'],
+        [1, 'result.html'],
+        [2, 'result.html'],
+        [3, 'result.html'],
+        [4, 'result.html'],
+        [5, 'result.html'],
+        [6, 'result.html'],
+        [7, 'result.html'],
+        [8, 'result.html'],
+        [9, 'result.html'],
+        [10, 'result.html'],
+        [11, 'result.html'],
+        [12, 'result.html'],
+        [13, 'result.html'],
+        [14, 'result.html'],
+        [15, 'result.html']
     ]
 ];
 
@@ -74,10 +74,10 @@ function print_quiz(){
     var answer;
     for(var i = 0; i < quizdata[0][currentquizNo][1].length; i++){
         if(i == 0){
-            answer = '<input type="button" class="btn btn--yellow btn--cubic" value="' + quizdata[0][currentquizNo][1][i] + '">';
+            answer = '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + quizdata[0][currentquizNo][2] +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
         }
         else{
-            answer += '<input type="button" class="btn btn--yellow btn--cubic" value="' + quizdata[0][currentquizNo][1][i] + '">';
+            answer += '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + quizdata[0][currentquizNo][2] +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
         }
     }
     Choices[0].innerHTML = answer;
@@ -85,5 +85,19 @@ function print_quiz(){
 
 //解答した後のイベントを起こすための関数
 function after_answer_quiz_event(){
+    for(var i = 0; i < document.getElementsByClassName(); i++){
+        document.getElementsByClassName('btn')[i].addEventListener('click', function(e){
+            //正解発表
+            answer_result_event(parseFloat(this.getAttribute('answer-choice')));
+            if(quizcount+1 < 15){
+                //次の問題を用意する
+                register_nextquiz_event();
+            }
+        });
+    }
+}
+
+//正解発表などをする関数
+answer_result_event(choice){
     
 }
