@@ -98,6 +98,6 @@ function after_answer_quiz_event(){
 }
 
 //正解発表などをする関数
-answer_result_event(choice){
+// answer_result_event(choice){
     
-}
+// }
