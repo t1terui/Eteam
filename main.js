@@ -74,10 +74,10 @@ function print_quiz(){
     var answer;
     for(var i = 0; i < quizdata[0][currentquizNo][1].length; i++){
         if(i == 0){
-            answer = '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + quizdata[0][currentquizNo][2] +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
+            answer = '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + (i+1) +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
         }
         else{
-            answer += '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + quizdata[0][currentquizNo][2] +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
+            answer += '<input type="button" class="btn btn--yellow btn--cubic" answer-choice="' + (i+1) +'" value="' + quizdata[0][currentquizNo][1][i] + '">';
         }
     }
     Choices[0].innerHTML = answer;
@@ -85,19 +85,42 @@ function print_quiz(){
 
 //解答した後のイベントを起こすための関数
 function after_answer_quiz_event(){
-    for(var i = 0; i < document.getElementsByClassName(); i++){
+    for(var i = 0; i < 4; i++){
         document.getElementsByClassName('btn')[i].addEventListener('click', function(e){
             //正解発表
             answer_result_event(parseFloat(this.getAttribute('answer-choice')));
-            if(quizcount+1 < 15){
-                //次の問題を用意する
-                register_nextquiz_event();
-            }
+            // if(quizcount+1 < 15){
+            //     //次の問題を用意する
+            //     register_nextquiz_event();
+            // }
         });
     }
 }
 
-//正解発表などをする関数
-// answer_result_event(choice){
-    
-// }
+//次の問題に移るための関数
+function register_nextquiz_event(){
+    quizcount++;
+    //問題を表示
+    print_quiz();
+    //解答した後のイベント
+    after_answer_quiz_event();
+}
+
+//正解発表などをする関数(仮実装)
+function answer_result_event(choice){
+    //正解の場合
+    if(quizdata[0][currentquizNo][2] == choice){
+        alert('正解');
+        correctcount++;
+    }
+    //不正解の場合
+    else{
+        alert('不正解');
+    }
+    if(quizcount+1 < 15){
+        register_nextquiz_event();
+    }
+    else{
+        alert('正解数は'+ correctcount);
+    }
+}
