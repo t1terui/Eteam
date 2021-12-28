@@ -146,3 +146,8 @@ input.btn--yellow:hover {
   border-bottom: 2px solid #ccc100;
 }
 /*-----------------------------------*/
+#graph{
+    width:30%;
+    margin-left: 60%;
+    margin-bottom: -10%;
+}

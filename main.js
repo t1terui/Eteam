@@ -1,21 +1,21 @@
 //クイズの問題や選択肢、正解を入れる配列
 let quizdata = [
     [
-        ['世界で一番多い血液型は？', ['A.A型','B.B型','C.O型','D.AB型'], 3, ''],
-        ['哺乳類に分類される海の生き物はどれでしょう？', ['A.サメ','B.クジラ','C.ナマコ','D.イカ'], 2, '間違えやすいサメは魚類です。魚類か哺乳類かを判断する一番簡単な見分け方は尾ビレの付き方です。魚類は、尾びれが垂直についていて、哺乳類は水平に付いています'],
-        ['三大栄養素とは「炭水化物」「タンパク質」とあともう一つはなんでしょう？', ['A.脂質','B.ビタミン','C.ミネラル','D.糖質'], 1, 'この三つの栄養素は、生命維持や身体活動に欠かせないエネルギー源です。'],
-        ['赤色と青色の絵具を混ぜると何色になるでしょう？', ['A.オレンジ色','B.紫色','C.灰色','D.桃色'], 2, ''],
-        ['最高気温30℃に達した日を何というでしょう？', ['A.夏日','B.真夏日','C.猛暑日','D.酷暑日'], 2, '「夏日」は25℃以上に達した日、「猛暑日」は35℃以上に達した日、気象庁に「酷暑日」という区分はありません。'],
-        ['世界一栄養価のない野菜としてギネス登録されているのはどれでしょう？', ['A.きゅうり','B.ワケギ','C.春菊','D.ネギ'], 1, 'きゅうりは大半が水分なので、栄養素の含有量が少ない。'],
-        ['畑の肉と呼ばれるものはなんでしょう？', ['A.かぼちゃ','B.じゃがいも','C.大豆','D.りんご'], 3, ''],
-        ['森のバターと呼ばれるものはなんでしょう？', ['A.アボカド','B.バナナ','C.ドリアン','D.じゃがいも'], 1, ''],
-        ['サハラ砂漠の「サハラ」の意味はなんでしょう？', ['A.不滅','B.古代','C.永遠','D.砂漠'], 4, 'すべて日本語に訳すと「砂漠砂漠」になってしまいます。'],
-        ['せんべいやスナック菓子の「サラダ味」とは、何の味のこと？', ['A.グリーンサラダ味','B.サラッとした味','C.サラダ油味','D.野菜味'], 3, 'サラダの味ではなく、サラダ油を使って作った菓子をサラダ味としています。'],
-        ['次のうち腐らないものはどれでしょう？', ['A.ハチミツ','B.トマト','C.ネギ','D.コンソメスープ'], 1, 'ハチミツは糖度が高く水分が少ないことから、細菌やバクテリアが繁殖しづらいため。ちなみに、スープもネギも最近によって腐る。'],
-        ['シュークリームの「シュー」の意味は？', ['A.バリバリ','B.山','C.キャベツ','D.生'], 3, '生地をキャベツに見立てた。'],
-        ['次のうち車のナンバープレートに使われない平仮名は？', ['A.わ','B.あ','C.お','D.え'], 3, '「お」「し」「へ」「ん」は使われない。「お」は「あ」と間違いやすいため、「し」は死を「へ」は屁を連想させるため。「ん」は発音しづらいため。'],
-        ['フグの膨らんでいる部分は、どの部位？', ['A.肺','B.頬','C.胃','D.手'], 3, '頬ではない。威嚇する際に空気や水を吸い込み胃に入れることで膨らむ。'],
-        ['電話をかける時に非通知にするための番号は？', ['A.111','B.184','C.186','D.232'], 2, '相手先の電話番号の前に「184」をつけることで電話番号を通知せずに発信することができます。184「いやよ」という語呂合わせで覚えるとよい。'],
+        ['世界で一番多い血液型は？', ['A.A型','B.B型','C.O型','D.AB型'], 3,[[40,0],[50,0],[90,0],[100,0]], '📞ヒント'],
+        ['哺乳類に分類される海の生き物はどれでしょう？', ['A.サメ','B.クジラ','C.ナマコ','D.イカ'], 2,[[30,0],[70,0],[85,0],[100,0]], '📞ヒント'],
+        ['三大栄養素とは「炭水化物」「タンパク質」とあともう一つはなんでしょう？', ['A.脂質','B.ビタミン','C.ミネラル','D.糖質'], 1, [[40,0],[60,0],[80,0],[100,0]], '📞ヒント'],
+        ['赤色と青色の絵具を混ぜると何色になるでしょう？', ['A.オレンジ色','B.紫色','C.灰色','D.桃色'], 2, [[10,0],[80,0],[90,0],[100,0]], '📞ヒント'],
+        ['最高気温30℃に達した日を何というでしょう？', ['A.夏日','B.真夏日','C.猛暑日','D.酷暑日'], 2, [[20,0],[55,0],[75,0],[100,0]], '📞ヒント'],
+        ['世界一栄養価のない野菜としてギネス登録されているのはどれでしょう？', ['A.きゅうり','B.ワケギ','C.春菊','D.ネギ'], 1, [[35,0],[55,0],[75,0],[100,0]], '📞ヒント'],
+        ['畑の肉と呼ばれるものはなんでしょう？', ['A.かぼちゃ','B.じゃがいも','C.大豆','D.りんご'], 3, [[20,0],[50,0],[90,0],[100,0]], '📞ヒント'],
+        ['森のバターと呼ばれるものはなんでしょう？', ['A.アボカド','B.バナナ','C.ドリアン','D.じゃがいも'], 1, [[35,0],[65,0],[85,0],[100,0]], '📞ヒント'],
+        ['サハラ砂漠の「サハラ」の意味はなんでしょう？', ['A.不滅','B.古代','C.永遠','D.砂漠'], 4, [[24,0],[49,0],[74,0],[100,0]], '📞ヒント'],
+        ['せんべいやスナック菓子の「サラダ味」とは、何の味のこと？', ['A.グリーンサラダ味','B.サラッとした味','C.サラダ油味','D.野菜味'], 3, [[40,0],[50,0],[90,0],[100,0]], '📞ヒント'],
+        ['次のうち腐らないものはどれでしょう？', ['A.ハチミツ','B.トマト','C.ネギ','D.コンソメスープ'], 1, [[30,0],[55,0],[80,0],[100,0]], '📞ヒント'],
+        ['シュークリームの「シュー」の意味は？', ['A.バリバリ','B.山','C.キャベツ','D.生'], 3, [[20,0],[45,0],[75,0],[100,0]], '📞ヒント'],
+        ['次のうち車のナンバープレートに使われない平仮名は？', ['A.わ','B.あ','C.お','D.え'], 3, [[25,0],[50,0],[80,0],[100,0]], '📞ヒント'],
+        ['フグの膨らんでいる部分は、どの部位？', ['A.肺','B.頬','C.胃','D.手'], 3, [[30,0],[60,0],[95,0],[100,0]], '📞ヒント'],
+        ['電話をかける時に非通知にするための番号は？', ['A.111','B.184','C.186','D.232'], 2, [[20,0],[50,0],[75,0],[100,0]], '📞ヒント']
     ],
     [
         [0, 'result.html'],
@@ -43,7 +43,17 @@ let correctcount = 0;   //正解数
 let experiencequiz = [];    //すでに出題した問題を入れるための配列
 let excount = 0;        //experiencequiz配列の添え字に使う用
 let fiftyfiftyused = false;     //50-50を使ったかどうか
+let audienceused = false;       //オーディエンスを使ったかどうか
+let audienceused2 = false;      //プログラムの仕様上必要
+let telephoneused = false;
 let remnum_array = [];          //消す選択肢を入れる配列
+
+const data = [
+    [10, 0],
+    [30, 0],
+    [60, 0],
+    [100, 0]
+];
 
 //問題を表示
 print_quiz();
@@ -54,10 +64,8 @@ document.getElementById('fiftyfifty').addEventListener('click', function(e){
         var i = 0;
         while(i < 2){
             var num = Math.floor(Math.random()*4)+1;
-            // console.log("正解"+quizdata[0][currentquizNo][2]);
             if(!remnum_array.includes(num) && num != quizdata[0][currentquizNo][2]){
                 remnum_array.push(num);
-                // console.log(remnum_array[i]);
                 i++;
             }
         }
@@ -67,12 +75,10 @@ document.getElementById('fiftyfifty').addEventListener('click', function(e){
             if(i == remnum_array[0]-1 || i == remnum_array[1]-1){
                 if(j == 0){
                     parent.removeChild(parent.children[i]);
-                    // console.log(parent.children[i]);
                     j++;
                 }
                 else{
                     parent.removeChild(parent.children[i-1]);
-                    // console.log(parent.children[i-1]);
                 }
             }
         }
@@ -82,6 +88,90 @@ document.getElementById('fiftyfifty').addEventListener('click', function(e){
         alert('50-50は使用済み');
     }
 })
+
+//オーディエンスのグラフを作る関数
+document.getElementById('audience').addEventListener('click', function(e){
+    if(!audienceused){
+        let count = 0;
+        while(count < 100){
+            let rand = Math.floor(Math.random()*100)+1;
+            for(var i = 0; i < 4; i++){
+                if(quizdata[0][currentquizNo][3][i][0] >= rand){
+                    quizdata[0][currentquizNo][3][i][1]++;
+                    break;
+                }
+            }
+            count++;
+        }
+
+        var ctx = document.getElementById("myBarChart");
+        var myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['A','B','C','D'],
+            datasets: [
+                {
+                    label: 'オーディエンス',
+                    data: [quizdata[0][currentquizNo][3][0][1], quizdata[0][currentquizNo][3][1][1], quizdata[0][currentquizNo][3][2][1], quizdata[0][currentquizNo][3][3][1]],
+                    backgroundColor: "silver",
+                    fontColor: "white"
+                }
+            ]
+            },
+            options: {
+            title: {
+                display: true,
+                // text: '結果',
+                fontColor: "white"
+            },
+            scales: {
+                xAxes :[{
+                    scaleLabel: {                 // 軸ラベル
+                        display: true,                // 表示設定
+                        labelString: '結果',    // ラベル
+                        fontColor: "white",             // 文字の色
+                        fontSize: 16                  // フォントサイズ
+                    },
+                    gridLines: {                   // 補助線
+                        color: "rgba(255, 0, 0, 0.2)", // 補助線の色
+                    },
+                    ticks: {                      // 目盛り
+                        fontColor: "white",             // 目盛りの色
+                        fontSize: 14                  // フォントサイズ
+                    }
+                }],
+                yAxes: [{
+                ticks: {
+                    suggestedMax: 100,
+                    suggestedMin: 0,
+                    stepSize: 10,
+                    fontColor: "white",
+                    callback: function(value, index, values){
+                    return  value +  '%'
+                    }
+                }
+                }]
+            },
+            }
+        });
+        audienceused = true;
+    }
+    else{
+        alert('オーディエンスは使用済み');
+    }
+})
+
+//テレフォンを表示する関数
+document.getElementById('telephone').addEventListener('click', function(e){
+    if(!telephoneused){
+        alert(quizdata[0][currentquizNo][4]);
+        telephoneused = true;
+    }
+    else{
+        alert("テレフォンは使用済み");
+    }
+})
+
 
 //解答した後のイベント
 after_answer_quiz_event();
@@ -124,6 +214,10 @@ function print_quiz(){
 function after_answer_quiz_event(){
     for(var i = 0; i < 4; i++){
         document.getElementsByClassName('btn')[i].addEventListener('click', function(e){
+            if(audienceused && !audienceused2){
+                document.getElementById('graph').remove();
+                audienceused2 = true;
+            }
             //正解発表
             answer_result_event(parseFloat(this.getAttribute('answer-choice')));
             // if(quizcount+1 < 15){
@@ -162,7 +256,4 @@ function answer_result_event(choice){
     }
 }
 
-//ライフライン
-document.getElementById('fiftyfifty').addEventListener('click', function(e){
-    
-})
+
