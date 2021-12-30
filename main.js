@@ -48,13 +48,6 @@ let audienceused2 = false;      //プログラムの仕様上必要
 let telephoneused = false;
 let remnum_array = [];          //消す選択肢を入れる配列
 
-const data = [
-    [10, 0],
-    [30, 0],
-    [60, 0],
-    [100, 0]
-];
-
 //問題を表示
 print_quiz();
 
