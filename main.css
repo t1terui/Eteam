@@ -44,7 +44,6 @@ body{
 a.s-btn,
 input.s-btn,
 button.s-btn {
-    width: 300px;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -83,7 +82,9 @@ input.s-btn--yellow:hover {
 /*----ライフライン----*/
 
 .life-line{
+    padding: 20px;
     margin: 30px;
+    text-align: left;
     display:flex;
     flex-flow: column;
 }
@@ -120,7 +121,7 @@ input.s-btn--yellow:hover {
         border-bottom: 5px solid #33cfcf;
       }
       
-    input.btn2--blue2:hover {
+    input.btn2--blue:hover {
         margin-top: 3px;
         color: #000;
         background: #00ffff;
@@ -140,7 +141,6 @@ input.s-btn--yellow:hover {
 a.r-btn,
 input.r-btn,
 button.r-btn {
-    width: 300px;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -209,7 +209,6 @@ input.r-btn--yellow:hover {
 a.btn,
 input.btn,
 button.btn {
-    width: 300px;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -241,11 +240,6 @@ input.btn--yellow:hover {
 /*-----------------------------------*/
 
 /*--------リザルト-----------*/
-
-
-
-
-
 
 
 /*-----------------------------------*/
