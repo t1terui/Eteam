@@ -21,8 +21,6 @@ body{
     justify-content: center;
     align-items: center;
 
-
-
     /*position:absolute;
     top: 50%;
     left: 50%;
@@ -38,7 +36,7 @@ body{
     
 }
 
-start-button{
+.start-button{
     padding: 40px;
 }
 
@@ -130,6 +128,49 @@ input.s-btn--yellow:hover {
       }
 /*---------------------*/
 
+/*---リザルトボタン---*/
+
+.result-button{
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.r-btn,
+a.r-btn,
+input.r-btn,
+button.r-btn {
+    width: 300px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+input.r-btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+input.r-btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
+/*--------------------------------------------*/
 
 /*----問題文----*/
 .box{
