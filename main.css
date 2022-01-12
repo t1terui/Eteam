@@ -14,15 +14,72 @@ body{
 }
 
 /*----タイトル----*/
-.p-quiz {
-    position:fixed;
+.quiz {
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    /*タイトルの枠線*/
+      padding: 0.5em 1em;
+      margin-top: 28px;
+      border: double 5px #fff100;
+      
+
+    /*position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;*/
+
 }
 
-.p-quiz-ttl{
+.quiz-ttl{
     font-size: 100px;
-    color: #000;
+    color: #F8F8F8;
     text-align: center;
+    
 }
+
+.start-button{
+    padding: 40px;
+}
+
+.s-btn,
+a.s-btn,
+input.s-btn,
+button.s-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+input.s-btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+input.s-btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
 /*---------------------*/
 
 .back-img{
@@ -32,7 +89,9 @@ body{
 /*----ライフライン----*/
 
 .life-line{
+    padding: 20px;
     margin: 30px;
+    text-align: left;
     display:flex;
     flex-flow: column;
 }
@@ -69,22 +128,69 @@ body{
         border-bottom: 5px solid #33cfcf;
       }
       
-    input.btn2--blue2:hover {
-        margin-top: 3px;
+    input.btn2--blue:hover {
+        background-color: #33cfcf;
+
+
+        /*margin-top: 3px;
         color: #000;
         background: #00ffff;
-        border-bottom: 2px solid #33cfcf;
+        border-bottom: 2px solid #33cfcf;*/
       }
 /*---------------------*/
 
+/*---リザルトボタン---*/
+
+.result-button{
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.r-btn,
+a.r-btn,
+input.r-btn,
+button.r-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+input.r-btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+input.r-btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
+/*--------------------------------------------*/
 
 /*----問題文----*/
 .box{
+    width: auto;
     padding: 0.5em 1em;
     margin: 2em ;
     border: double 5px #4ec4d3;
-    height: 250px;
+    height: 300px;
     background-color: #2e3042;
+    word-wrap: break-all;
 }
 
 .box p{
@@ -115,7 +221,6 @@ body{
 a.btn,
 input.btn,
 button.btn {
-    width: 300px;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -145,8 +250,53 @@ input.btn--yellow:hover {
   border-bottom: 2px solid #ccc100;
 }
 /*-----------------------------------*/
+
+/*--------リザルト-----------*/
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+  }
+  
+  a{
+    color: #333;
+  }
+  
+  /*========= particle js を描画するエリア設定 ===============*/
+  
+  html,body{
+    height: 100%;/*高さを100%にして描画エリアをとる*/
+  }
+  
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:#2e3042;/*背景色*/
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+  }
+  
+  
+/*-----------------------------------*/
+
+
 #graph{
     width:30%;
     margin-left: 60%;
     margin-bottom: -10%;
+    color: #fff;
 }
+
+
