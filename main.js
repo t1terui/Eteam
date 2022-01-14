@@ -350,7 +350,7 @@ function answer_result_event(choice){
     else{
         //結果を見るボタンを表示
         var result_button = document.getElementsByClassName('result-button');
-        var result = '<a href="result-honban.html"><input type="button" class="r-btn r-btn--yellow r-btn--cubic" id="result" value="結果を見る"></a>';
+        var result = '<a href="result.html"><input type="button" class="r-btn r-btn--yellow r-btn--cubic" id="result" value="結果を見る"></a>';
         result_button[0].innerHTML = result;
 
         //問題と選択肢を削除
