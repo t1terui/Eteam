@@ -36,7 +36,7 @@ body{
 
 }
 
-.quiz-ttl{
+.quiz-ttl, .correct-ttl{
     font-size: 100px;
     color: #F8F8F8;
     text-align: center;
