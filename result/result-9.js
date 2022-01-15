@@ -8,7 +8,7 @@ particlesJS("particles-js",{
         }
       },
       "color": {
-          "value": ["#EA5532", "#F6AD3C", "#FFF33F", "#00A95F", "#00ADA9", "#00AFEC","#4D4398", "#E85298"]//紙吹雪の色の数を増やすことが出来る
+          "value": ["#c0c0c0"]//紙吹雪の色の数を増やすことが出来る
       },
       "shape":{
         "type":"polygon",//形状はpolygonを指定
