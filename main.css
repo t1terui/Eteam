@@ -188,7 +188,7 @@ input.r-btn--yellow:hover {
     padding: 0.5em 1em;
     margin: 2em ;
     border: double 5px #4ec4d3;
-    height: 300px;
+    height: auto;
     background-color: #2e3042;
     word-wrap: break-all;
 }

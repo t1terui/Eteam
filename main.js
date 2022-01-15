@@ -340,7 +340,7 @@ function answer_result_event(choice){
         var result_button = document.getElementsByClassName('result-button');
         for(var i = 0; i < 11; i++){
             if(i == correctcount){
-                var result = '<a href="' + quizdata[1][i] + '"><input type="button" class="r-btn r-btn--yellow r-btn--cubic" id="result" value="結果を見る"></a>';
+                var result = '<a href="result/' + quizdata[1][i] + '"><input type="button" class="r-btn r-btn--yellow r-btn--cubic" id="result" value="結果を見る"></a>';
                 result_button[0].innerHTML = result;
                 break;
             }
@@ -361,7 +361,7 @@ function answer_result_event(choice){
 particlesJS("particles-js",{
     "particles":{
       "number":{
-        "value":125,//この数値を変更すると紙吹雪の数が増減できる
+        "value":15,//この数値を変更すると紙吹雪の数が増減できる125
         "density":{
           "enable":false,
           "value_area":400
