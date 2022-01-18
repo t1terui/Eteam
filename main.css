@@ -82,6 +82,65 @@ input.s-btn--yellow:hover {
 
 /*---------------------*/
 
+/*--- 説明 ---*/
+
+h3{
+  font-size: 70px;
+  color: #F8F8F8;
+  text-align: center;
+  
+}
+
+.m-box{
+  width: auto;
+    padding: 0.5em 1em;
+    margin: 2em ;
+    border: double 5px #4ec4d3;
+    height: auto;
+    background-color: #2e3042;
+    word-wrap: break-all;
+}
+
+.manual-button{
+  text-align: center;
+  justify-content:center;
+}
+
+.m-btn,
+a.m-btn,
+input.m-btn,
+button.m-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+
+input.m-btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+input.m-btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
+/*----------------------*/
+
 .back-img{
     height: 250px;
     width: 100%;
